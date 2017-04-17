@@ -1,0 +1,7 @@
+Database: 
+
+Products Controller: 
+
+Models: Where thr classes go that deal with the databases
+If you wanna fetch all the product info in the database from the the products controller you need to reach into the products model and pass it in the view 
+
