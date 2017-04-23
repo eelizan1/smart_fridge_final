@@ -6,7 +6,7 @@ class Wii:
         self._measureCnt = 0
 
     def calc_mass(self):
-        val = 2
+        val = 10
         return val
 
 board = Wii()

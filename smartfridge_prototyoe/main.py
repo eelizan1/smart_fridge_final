@@ -1,12 +1,13 @@
-import wii_test
-import fridge
 import time
+def get(count):
+   inc = count
+   print(inc)
+   int =+ 1
 
-# weight = wii_test.get()
-# print(weight)
 
 while False:
-    item = fridge.fridge1.get_current_item()
-    print(item)
+    count = 0
+    get(count)
     time.sleep(1)
+
 

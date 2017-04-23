@@ -25,18 +25,33 @@ def get_order_weight(name):
 def print_item(item):
     print(item)
 
-def status_check(current_weight, warning_weight, order_weight):
+def status_check(current_weight, warning_weight, order_weight, id):
     warning_limit = warning_weight + 5
     if current_weight <= order_weight:
-        # update order's table in db
-        print("ordering new item")
-    elif warning_weight <= current_weight <= warning_limit:
         # update fridge table
-        print("status low")
+        status = "Need to Re-order"
+        update_status(status, id)
+    elif warning_weight <= current_weight <= warning_limit:
+        status = "Low"
+        update_status(status, id)
     else:
-        print("Status is good")
+        status = "Good"
+        update_status(status, id)
+    print(status)
+    return status
 
-while False:
+def order():
+    conn.execute("INSERT INTO orders(product_id, user_id, order_amount) VALUES(1, 2, 2)")
+    print("ordering new item")
+    conn.commit()
+    print("Order complete")
+
+def update_status(status, id):
+    conn.execute("UPDATE fridge SET status = ? WHERE id = ?", (status, id))
+    conn.commit()
+
+calledOnce = False
+while True:
     current_weight = wii_test.get()
 
     fridge_data = fridge.make()
@@ -45,14 +60,16 @@ while False:
     status = fridge_data[2]
     user = fridge_data[3]
     # print("Fridge Data: {0}, {1}, {2}, {3}".format(id, item, status, user))
-    time.sleep(1)
     warning_weight = get_warning_weight(item)
     order_weight = get_order_weight(item)
+    time.sleep(1)
 
     print(current_weight)
-    status_check(current_weight, warning_weight, order_weight)
+    update = status_check(current_weight, warning_weight, order_weight, id)
 
+    if (update == "Need to Re-order") and (not calledOnce):
+        print("ordering")
+        order()
+        calledOnce = True
 
-# cursor.close()
-# db.commit()
 conn.close()

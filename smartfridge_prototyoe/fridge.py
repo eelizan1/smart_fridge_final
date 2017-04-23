@@ -23,8 +23,6 @@ class Fridge:
     def get_fridge_user_id(self):
         return self.user_id
 
-
-
 def make():
     cursor = db.cursor()
     fridge_id = 0
