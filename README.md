@@ -15,4 +15,4 @@ Design: Uses threading
   Main Loop that checks client side and wii board for updates of data (inspired by round robin architecture)
   Producer Consumer: Producer fetches weight and consumer sends to main loop
   
- 
+ ![alt text](https://github.com/eelizan1/smart_fridge_final/blob/master/mainloop.png)
