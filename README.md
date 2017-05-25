@@ -2,7 +2,7 @@
 
 Using Raspberry Pi to repeatedly fetch product data from a fridge and execute specific operations accordingly – reorder from an ecommerce site, notify user, CRUD operations. 
 
-Let's a user know when they are out of items in a fridge. Re-orders the item for them through an e-commerce website. Idea is to save user's time from getting the item themselves. 
+Let's a user know when they are out of items in a fridge. Re-orders the item for them through an e-commerce website that has been made. Idea is to save user's time from getting the item themselves. 
 
 Main Materials: 
  1. Mini fridge
@@ -16,3 +16,6 @@ Design: Uses threading
   Producer Consumer: Producer fetches weight and consumer sends to main loop
   
  ![alt text](https://github.com/eelizan1/smart_fridge_final/blob/master/mainloop.png)
+ 
+ Final Result Fridge 
+ ![alt text](https://github.com/eelizan1/smart_fridge_final/blob/master/all.png)
