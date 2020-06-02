@@ -4,7 +4,7 @@ import wii_test
 import sqlite3
 
 # connect to db
-conn = sqlite3.connect("smartfridge.db")
+conn = sqlite3.connect("webapplication.db")
 
 # returns weight : 45
 # cursor = db.cursor()

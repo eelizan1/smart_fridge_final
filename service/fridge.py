@@ -1,7 +1,7 @@
 import sqlite3
 import time
 # connect to db
-db = sqlite3.connect("smartfridge.db")
+db = sqlite3.connect("webapplication.db")
 
 class Fridge:
 

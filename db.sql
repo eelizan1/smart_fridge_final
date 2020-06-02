@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: smartfridge
+-- Host: localhost    Database: webapplication
 -- ------------------------------------------------------
 -- Server version	5.7.14
 
