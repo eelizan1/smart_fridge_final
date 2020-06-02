@@ -1,3 +1,5 @@
+# client side and wii board for updates of data (inspired by round robin architecture)
+
 calledOnce = False
 
 while True:

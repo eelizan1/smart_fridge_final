@@ -1,9 +1,11 @@
+# Sends sends information to the main loop
+
 class ConsumerThread(threading.Thread):
     def run(self):
         global queue
         while True:
             condition.acquire()
-            if not queue: 
+            if not queue:
                 print("Nothing in queue")
                 condition.wait()
                 print("Producer added to queue")

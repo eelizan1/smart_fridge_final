@@ -1,3 +1,5 @@
+# In charge of fetching current weight from the wii board
+
 while self.status == "Connected" and not self.processor.done:
     data = self.recievedsocket.recv(25)
     intype = int(data.encode("hex")[2:4])
